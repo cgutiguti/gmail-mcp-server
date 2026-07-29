@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gmail MCP Server</title>
-    <meta name="description" content="A local Model Context Protocol server for connecting an AI assistant to a Gmail account with user-controlled OAuth access.">
+    <title>Claude Gmail MCP</title>
+    <meta name="description" content="Claude Gmail MCP is a local Model Context Protocol server that lets Claude access Gmail only after the user grants OAuth permission.">
     <style>
       :root {
         color-scheme: light;
@@ -143,7 +143,7 @@
   <body>
     <header>
       <nav aria-label="Primary navigation">
-        <div class="brand">Gmail MCP Server</div>
+        <div class="brand">Claude Gmail MCP</div>
         <div>
           <a href="#overview">Overview</a>
           <a href="#terms">Terms</a>
@@ -151,14 +151,15 @@
         </div>
       </nav>
       <div class="hero">
-        <h1>Local Gmail access for MCP-compatible assistants.</h1>
-        <p class="lead">Gmail MCP Server is an open-source, user-run connector that lets a local AI assistant read, search, label, draft, send, and manage Gmail messages after the user grants OAuth permission.</p>
+        <h1>Claude Gmail MCP</h1>
+        <p class="lead">Claude Gmail MCP is an open-source, user-run connector that lets Claude access a Gmail mailbox through Google's OAuth flow so the user can ask Claude to search, read, label, draft, send, import, and organize email.</p>
       </div>
     </header>
     <main>
       <section id="overview">
-        <h2>Overview</h2>
-        <p>This project runs on the user's machine and connects to Gmail through Google's OAuth flow. It exposes Gmail tools over the Model Context Protocol so compatible clients can perform mailbox actions requested by the user.</p>
+        <h2>Purpose</h2>
+        <p>The purpose of Claude Gmail MCP is to connect Claude to a Gmail account that the user owns or is authorized to administer. The app requests Gmail access so Claude can carry out user-directed mailbox tasks, including searching messages, reading threads, applying labels, creating drafts, sending replies, downloading messages or attachments, and importing email archives into Gmail.</p>
+        <p>This project runs on the user's machine and exposes Gmail tools over the Model Context Protocol. It is intended for personal or internal workflow automation where the user remains in control of OAuth authorization and assistant actions.</p>
         <div class="grid">
           <div class="panel">
             <strong>User-controlled OAuth</strong>
@@ -173,6 +174,8 @@
             <p>The server filters available MCP tools based on the OAuth scopes granted during authentication.</p>
           </div>
         </div>
+        <h3>Google User Data Use</h3>
+        <p>Claude Gmail MCP uses Google user data only to perform the Gmail actions requested by the authenticated user. Message contents, labels, attachments, and metadata are accessed only as needed for those user-directed actions. The maintainers do not operate a hosted service that collects or stores Gmail data.</p>
       </section>
       <section id="terms">
         <h2>Terms Of Service</h2>
