@@ -71,6 +71,16 @@
         color: var(--muted);
         font-size: 1.18rem;
       }
+      .identity {
+        display: inline-block;
+        margin: 28px 0 0;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--ink);
+        font-weight: 700;
+      }
       main {
         padding: 48px 0 72px;
       }
@@ -153,12 +163,14 @@
       <div class="hero">
         <h1>Claude Gmail MCP</h1>
         <p class="lead">Claude Gmail MCP is an open-source, user-run connector that lets Claude access a Gmail mailbox through Google's OAuth flow so the user can ask Claude to search, read, label, draft, send, import, and organize email.</p>
+        <div class="identity">Application name: Claude Gmail MCP</div>
       </div>
     </header>
     <main>
       <section id="overview">
-        <h2>Purpose</h2>
-        <p>The purpose of Claude Gmail MCP is to connect Claude to a Gmail account that the user owns or is authorized to administer. The app requests Gmail access so Claude can carry out user-directed mailbox tasks, including searching messages, reading threads, applying labels, creating drafts, sending replies, downloading messages or attachments, and importing email archives into Gmail.</p>
+        <h2>Purpose Of Claude Gmail MCP</h2>
+        <p>Claude Gmail MCP is the application named on the OAuth consent screen. Its purpose is to connect Claude to a Gmail account that the user owns or is authorized to administer.</p>
+        <p>The app requests Gmail access so Claude can carry out user-directed mailbox tasks, including searching messages, reading threads, applying labels, creating drafts, sending replies, downloading messages or attachments, and importing email archives into Gmail.</p>
         <p>This project runs on the user's machine and exposes Gmail tools over the Model Context Protocol. It is intended for personal or internal workflow automation where the user remains in control of OAuth authorization and assistant actions.</p>
         <div class="grid">
           <div class="panel">
